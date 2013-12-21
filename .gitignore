@@ -7,6 +7,9 @@ build/*
 *.perspectivev3
 *~.nib
 
+#ignore plist
+twcourses/twcourses-Info.plist
+
 .ruby-version
 .ruby-gemset
 
