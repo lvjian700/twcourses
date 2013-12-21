@@ -12,6 +12,7 @@ Thoughtworks Courses App.
 	git clone https://github.com/lvjian700/twcourses.git
 	cd twcourses
 	pod install
+	open twcourses.xcworkspace
 
 ##Conventions
 
