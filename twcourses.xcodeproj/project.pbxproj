@@ -227,9 +227,6 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "xi'an thoughtworks";
 				TargetAttributes = {
-					49DE687F1865A766008846C9 = {
-						DevelopmentTeam = C85KQG8PYQ;
-					};
 					49DE68A01865A766008846C9 = {
 						TestTargetID = 49DE687F1865A766008846C9;
 					};
