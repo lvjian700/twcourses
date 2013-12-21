@@ -6,9 +6,12 @@ build/*
 *.perspective
 *.perspectivev3
 *~.nib
+xcuserdata
 
-#ignore plist
+#xcode 5
 twcourses/twcourses-Info.plist
+*.xccheckout
+*.ipa
 
 .ruby-version
 .ruby-gemset

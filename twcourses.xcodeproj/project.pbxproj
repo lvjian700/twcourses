@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4927DCFC1865D137001E750A /* TWCourses.m in Sources */ = {isa = PBXBuildFile; fileRef = 4927DCFB1865D137001E750A /* TWCourses.m */; };
+		4927DCFF1865D173001E750A /* TWSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4927DCFE1865D173001E750A /* TWSection.m */; };
 		49DE68841865A766008846C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE68831865A766008846C9 /* Foundation.framework */; };
 		49DE68861865A766008846C9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE68851865A766008846C9 /* CoreGraphics.framework */; };
 		49DE68881865A766008846C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE68871865A766008846C9 /* UIKit.framework */; };
@@ -22,6 +24,7 @@
 		49DE68AD1865A766008846C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49DE68AB1865A766008846C9 /* InfoPlist.strings */; };
 		49DE68AF1865A766008846C9 /* twcoursesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DE68AE1865A766008846C9 /* twcoursesTests.m */; };
 		49DE68BA1865C015008846C9 /* sections_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DE68B91865C015008846C9 /* sections_Storyboard.storyboard */; };
+		49DE68C41865D033008846C9 /* TWCoursesDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DE68C31865D033008846C9 /* TWCoursesDetailsViewController.m */; };
 		AA5A22DE641F4CE698DAF79C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F5CBAC593D4765ABC16B75 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4927DCFA1865D137001E750A /* TWCourses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWCourses.h; path = modules/TWCourses.h; sourceTree = "<group>"; };
+		4927DCFB1865D137001E750A /* TWCourses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWCourses.m; path = modules/TWCourses.m; sourceTree = "<group>"; };
+		4927DCFD1865D173001E750A /* TWSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWSection.h; path = modules/TWSection.h; sourceTree = "<group>"; };
+		4927DCFE1865D173001E750A /* TWSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWSection.m; path = modules/TWSection.m; sourceTree = "<group>"; };
 		49DE68801865A766008846C9 /* twcourses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twcourses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DE68831865A766008846C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		49DE68851865A766008846C9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -56,6 +63,8 @@
 		49DE68AC1865A766008846C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49DE68AE1865A766008846C9 /* twcoursesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = twcoursesTests.m; sourceTree = "<group>"; };
 		49DE68B91865C015008846C9 /* sections_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = sections_Storyboard.storyboard; sourceTree = "<group>"; };
+		49DE68C21865D033008846C9 /* TWCoursesDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCoursesDetailsViewController.h; sourceTree = "<group>"; };
+		49DE68C31865D033008846C9 /* TWCoursesDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCoursesDetailsViewController.m; sourceTree = "<group>"; };
 		AC6088D3188A416C8FA266BC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E9F5CBAC593D4765ABC16B75 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,6 +137,8 @@
 				49DE68991865A766008846C9 /* TWViewController.m */,
 				49DE689B1865A766008846C9 /* Images.xcassets */,
 				49DE688A1865A766008846C9 /* Supporting Files */,
+				49DE68C21865D033008846C9 /* TWCoursesDetailsViewController.h */,
+				49DE68C31865D033008846C9 /* TWCoursesDetailsViewController.m */,
 			);
 			path = twcourses;
 			sourceTree = "<group>";
@@ -173,6 +184,10 @@
 		49DE68BB1865C55C008846C9 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				4927DCFA1865D137001E750A /* TWCourses.h */,
+				4927DCFB1865D137001E750A /* TWCourses.m */,
+				4927DCFD1865D173001E750A /* TWSection.h */,
+				4927DCFE1865D173001E750A /* TWSection.m */,
 			);
 			name = modules;
 			sourceTree = "<group>";
@@ -227,6 +242,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "xi'an thoughtworks";
 				TargetAttributes = {
+					49DE687F1865A766008846C9 = {
+						DevelopmentTeam = C85KQG8PYQ;
+					};
 					49DE68A01865A766008846C9 = {
 						TestTargetID = 49DE687F1865A766008846C9;
 					};
@@ -313,7 +331,10 @@
 			files = (
 				49DE68901865A766008846C9 /* main.m in Sources */,
 				49DE68941865A766008846C9 /* TWAppDelegate.m in Sources */,
+				4927DCFC1865D137001E750A /* TWCourses.m in Sources */,
+				4927DCFF1865D173001E750A /* TWSection.m in Sources */,
 				49DE689A1865A766008846C9 /* TWViewController.m in Sources */,
+				49DE68C41865D033008846C9 /* TWCoursesDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
