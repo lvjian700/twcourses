@@ -1,0 +1,46 @@
+#pecific
+build/*
+*.pbxuser
+*.mode2v3
+*.mode1v3
+*.perspective
+*.perspectivev3
+*~.nib
+
+.ruby-version
+.ruby-gemset
+
+#cocopaods
+Pods/
+Podfile.lock
+
+## media file
+*.mp4
+*.mkv
+*.m4v
+
+## static linked file
+*.a
+
+## ignore private workspace stuff added by Xcode4
+xcuserdata
+project.xcworkspace
+*.xcuserdata
+
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+*.log
+*.log.*
+
+## my
+tmp/*
+libs/*
+output/*
+plan
+
+
+

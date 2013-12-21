@@ -21,6 +21,7 @@
 		49DE68A51865A766008846C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE68871865A766008846C9 /* UIKit.framework */; };
 		49DE68AD1865A766008846C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49DE68AB1865A766008846C9 /* InfoPlist.strings */; };
 		49DE68AF1865A766008846C9 /* twcoursesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DE68AE1865A766008846C9 /* twcoursesTests.m */; };
+		AA5A22DE641F4CE698DAF79C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F5CBAC593D4765ABC16B75 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		49DE68AA1865A766008846C9 /* twcoursesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "twcoursesTests-Info.plist"; sourceTree = "<group>"; };
 		49DE68AC1865A766008846C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49DE68AE1865A766008846C9 /* twcoursesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = twcoursesTests.m; sourceTree = "<group>"; };
+		AC6088D3188A416C8FA266BC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		E9F5CBAC593D4765ABC16B75 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 				49DE68861865A766008846C9 /* CoreGraphics.framework in Frameworks */,
 				49DE68881865A766008846C9 /* UIKit.framework in Frameworks */,
 				49DE68841865A766008846C9 /* Foundation.framework in Frameworks */,
+				AA5A22DE641F4CE698DAF79C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +90,7 @@
 				49DE68A81865A766008846C9 /* twcoursesTests */,
 				49DE68821865A766008846C9 /* Frameworks */,
 				49DE68811865A766008846C9 /* Products */,
+				AC6088D3188A416C8FA266BC /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +110,7 @@
 				49DE68851865A766008846C9 /* CoreGraphics.framework */,
 				49DE68871865A766008846C9 /* UIKit.framework */,
 				49DE68A21865A766008846C9 /* XCTest.framework */,
+				E9F5CBAC593D4765ABC16B75 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49DE68B21865A766008846C9 /* Build configuration list for PBXNativeTarget "twcourses" */;
 			buildPhases = (
+				09A2F9397A40491F909055EE /* Check Pods Manifest.lock */,
 				49DE687C1865A766008846C9 /* Sources */,
 				49DE687D1865A766008846C9 /* Frameworks */,
 				49DE687E1865A766008846C9 /* Resources */,
+				16201073B6D14B299C4C1DAA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,6 +208,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "xi'an thoughtworks";
 				TargetAttributes = {
+					49DE687F1865A766008846C9 = {
+						DevelopmentTeam = C85KQG8PYQ;
+					};
 					49DE68A01865A766008846C9 = {
 						TestTargetID = 49DE687F1865A766008846C9;
 					};
@@ -244,6 +255,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09A2F9397A40491F909055EE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		16201073B6D14B299C4C1DAA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		49DE687C1865A766008846C9 /* Sources */ = {
@@ -376,9 +420,11 @@
 		};
 		49DE68B31865A766008846C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC6088D3188A416C8FA266BC /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "twcourses/twcourses-Prefix.pch";
 				INFOPLIST_FILE = "twcourses/twcourses-Info.plist";
@@ -389,9 +435,11 @@
 		};
 		49DE68B41865A766008846C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC6088D3188A416C8FA266BC /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "twcourses/twcourses-Prefix.pch";
 				INFOPLIST_FILE = "twcourses/twcourses-Info.plist";
@@ -461,6 +509,7 @@
 				49DE68B41865A766008846C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49DE68B51865A766008846C9 /* Build configuration list for PBXNativeTarget "twcoursesTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +518,7 @@
 				49DE68B71865A766008846C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
