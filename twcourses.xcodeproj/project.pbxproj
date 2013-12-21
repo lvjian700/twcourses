@@ -21,6 +21,7 @@
 		49DE68A51865A766008846C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE68871865A766008846C9 /* UIKit.framework */; };
 		49DE68AD1865A766008846C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49DE68AB1865A766008846C9 /* InfoPlist.strings */; };
 		49DE68AF1865A766008846C9 /* twcoursesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DE68AE1865A766008846C9 /* twcoursesTests.m */; };
+		49DE68BA1865C015008846C9 /* sections_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DE68B91865C015008846C9 /* sections_Storyboard.storyboard */; };
 		AA5A22DE641F4CE698DAF79C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F5CBAC593D4765ABC16B75 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		49DE68AA1865A766008846C9 /* twcoursesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "twcoursesTests-Info.plist"; sourceTree = "<group>"; };
 		49DE68AC1865A766008846C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49DE68AE1865A766008846C9 /* twcoursesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = twcoursesTests.m; sourceTree = "<group>"; };
+		49DE68B91865C015008846C9 /* sections_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = sections_Storyboard.storyboard; sourceTree = "<group>"; };
 		AC6088D3188A416C8FA266BC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E9F5CBAC593D4765ABC16B75 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,9 +120,10 @@
 		49DE68891865A766008846C9 /* twcourses */ = {
 			isa = PBXGroup;
 			children = (
+				49DE68BB1865C55C008846C9 /* modules */,
+				49DE68B81865BF6B008846C9 /* storyborads */,
 				49DE68921865A766008846C9 /* TWAppDelegate.h */,
 				49DE68931865A766008846C9 /* TWAppDelegate.m */,
-				49DE68951865A766008846C9 /* Main.storyboard */,
 				49DE68981865A766008846C9 /* TWViewController.h */,
 				49DE68991865A766008846C9 /* TWViewController.m */,
 				49DE689B1865A766008846C9 /* Images.xcassets */,
@@ -156,6 +159,22 @@
 				49DE68AB1865A766008846C9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49DE68B81865BF6B008846C9 /* storyborads */ = {
+			isa = PBXGroup;
+			children = (
+				49DE68951865A766008846C9 /* Main.storyboard */,
+				49DE68B91865C015008846C9 /* sections_Storyboard.storyboard */,
+			);
+			name = storyborads;
+			sourceTree = "<group>";
+		};
+		49DE68BB1865C55C008846C9 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49DE689C1865A766008846C9 /* Images.xcassets in Resources */,
+				49DE68BA1865C015008846C9 /* sections_Storyboard.storyboard in Resources */,
 				49DE688E1865A766008846C9 /* InfoPlist.strings in Resources */,
 				49DE68971865A766008846C9 /* Main.storyboard in Resources */,
 			);
