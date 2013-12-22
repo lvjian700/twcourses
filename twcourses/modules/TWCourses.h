@@ -16,6 +16,7 @@
 
 @property (copy, nonatomic) NSString *name;
 @property (copy, nonatomic) NSString *overview;
+@property (copy, nonatomic) NSString *coverImagePath;
 
 @property (copy, nonatomic) NSArray *sections;
 

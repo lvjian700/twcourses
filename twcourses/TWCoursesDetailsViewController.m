@@ -28,7 +28,13 @@
     [super viewDidLoad];
     
     self.courses = [TWCourses coursesFromRemote];
+    
+    UIImage *coverImage = TWImage(self.courses.coverImagePath);
+    self.coverImageView.image = coverImage;
+    self.overviewTextView.text = self.courses.overview;
   
+    
+    
     DLog(@"courses name: %@", self.courses.name);
     self.navigationController.navigationBar.topItem.title = self.courses.name;
 
@@ -62,8 +68,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"SectionTableCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *SectionCellIdentifier = @"SectionTableCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SectionCellIdentifier forIndexPath:indexPath];
     
     TWSection *module = [self.courses.sections objectAtIndex:indexPath.row];
     cell.textLabel.text = module.name;
