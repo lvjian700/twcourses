@@ -18,6 +18,8 @@ Thoughtworks Courses App.
 
 * one storyboard file per story.
 * storyboard file put in storyboards group.
+* all #define start with 'TW' preffix, all #define put into utils/TWDefines.h file.
+
 
 ##Libraries
 
