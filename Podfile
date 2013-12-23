@@ -1,4 +1,4 @@
-platform :ios
+platform :ios, '6.0'
 pod 'Reachability', '~> 3.0.0'
 pod 'MBProgressHUD', '~> 0.8'
 pod 'FMDB', '~> 2.1'
