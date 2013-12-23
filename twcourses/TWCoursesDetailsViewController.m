@@ -63,7 +63,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.courses.sections count];
+    return [self.courses.chapters count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -72,7 +72,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SectionCellIdentifier forIndexPath:indexPath];
     
-    TWSection *module = [self.courses.sections objectAtIndex:indexPath.row];
+    TWChapter *module = [self.courses.chapters objectAtIndex:indexPath.row];
     cell.textLabel.text = module.name;
     
     return cell;

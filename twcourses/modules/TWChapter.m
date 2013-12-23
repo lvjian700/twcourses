@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 xi'an thoughtworks. All rights reserved.
 //
 
-#import "TWSection.h"
+#import "TWChapter.h"
 
-@implementation TWSection
+@implementation TWChapter
 
 @end

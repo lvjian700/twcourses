@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TWCourses.h"
-#import "TWSection.h"
+#import "TWChapter.h"
 
 @interface TWCourses : NSObject
 
@@ -18,6 +18,6 @@
 @property (copy, nonatomic) NSString *overview;
 @property (copy, nonatomic) NSString *coverImagePath;
 
-@property (copy, nonatomic) NSArray *sections;
+@property (copy, nonatomic) NSArray *chapters;
 
 @end

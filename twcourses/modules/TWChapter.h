@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TWSection : NSObject
+@interface TWChapter : NSObject
 
 @property(copy, nonatomic) NSString *name;
 @property(nonatomic) NSInteger chapterNumber;
