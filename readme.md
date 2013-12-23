@@ -20,7 +20,6 @@ Thoughtworks Courses App.
 * 所有storyboard放到storyboards group下
 * 所有 #define 以__TW__开头,并且#define 放到 _utils/TWDefines.h_ 中.
 
-
 ##Libraries
 
 See Podfile
