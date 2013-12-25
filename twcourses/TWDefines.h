@@ -13,6 +13,7 @@
 // Paths
 
 // Configration
+#define TWCoursesRootPath @"http://10.29.2.171:3000"
 #define TWCoursesAPIURL [NSURL URLWithString: @"http://10.29.2.171:3000/api/"]
 #define TWDateFormatTimeZone @"yyyy-MM-dd HH:mm:ss Z"
 

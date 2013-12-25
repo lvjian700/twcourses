@@ -10,7 +10,6 @@
 		4927DD101865EC50001E750A /* TWCourses.m in Sources */ = {isa = PBXBuildFile; fileRef = 4927DD0D1865EC50001E750A /* TWCourses.m */; };
 		4927DD111865EC50001E750A /* TWChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4927DD0F1865EC50001E750A /* TWChapter.m */; };
 		4927DD141865EC5D001E750A /* TWCoursesDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4927DD131865EC5D001E750A /* TWCoursesDetailsViewController.m */; };
-		499464F118671C05003C22CB /* stanford.png in Resources */ = {isa = PBXBuildFile; fileRef = 499464F018671C05003C22CB /* stanford.png */; };
 		49DE68841865A766008846C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE68831865A766008846C9 /* Foundation.framework */; };
 		49DE68861865A766008846C9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE68851865A766008846C9 /* CoreGraphics.framework */; };
 		49DE68881865A766008846C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE68871865A766008846C9 /* UIKit.framework */; };
@@ -47,7 +46,6 @@
 		4927DD121865EC5D001E750A /* TWCoursesDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCoursesDetailsViewController.h; sourceTree = "<group>"; };
 		4927DD131865EC5D001E750A /* TWCoursesDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCoursesDetailsViewController.m; sourceTree = "<group>"; };
 		496CEDB6186970F7006BED0E /* TWRKModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWRKModule.h; path = modules/TWRKModule.h; sourceTree = "<group>"; };
-		499464F018671C05003C22CB /* stanford.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stanford.png; path = images/stanford.png; sourceTree = "<group>"; };
 		499464F318671CF5003C22CB /* TWDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWDefines.h; sourceTree = "<group>"; };
 		49DE68801865A766008846C9 /* twcourses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twcourses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DE68831865A766008846C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -101,7 +99,6 @@
 		499464EF18671BEB003C22CB /* images */ = {
 			isa = PBXGroup;
 			children = (
-				499464F018671C05003C22CB /* stanford.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -297,7 +294,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				499464F118671C05003C22CB /* stanford.png in Resources */,
 				49DE689C1865A766008846C9 /* Images.xcassets in Resources */,
 				49DE68BA1865C015008846C9 /* sections_Storyboard.storyboard in Resources */,
 				49DE688E1865A766008846C9 /* InfoPlist.strings in Resources */,

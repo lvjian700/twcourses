@@ -7,6 +7,7 @@
 //
 
 #import "TWCoursesDetailsViewController.h"
+#import <SDWebImage/SDWebImageManager.h>
 
 @interface TWCoursesDetailsViewController ()
 
@@ -30,11 +31,17 @@
     [TWCourses findOneByName:@"123" success:^(TWCourses *courses) {
         _courses = courses;
         
-        DLog(@"courses name: %@", self.courses.name);
-        self.navigationController.navigationBar.topItem.title = self.courses.name;
-        _overviewTextView.text = self.courses.overview;
+        self.navigationController.navigationBar.topItem.title = _courses.name;
+        _overviewTextView.text = _courses.overview;
+      
+        NSString *imagePath = [NSString stringWithFormat:@"%@%@", TWCoursesRootPath, _courses.coverImagePath];
+        DLog(@"-image path: %@", imagePath);
+        NSURL *imageURL = [NSURL URLWithString: imagePath];
+        [_coverImageView setImageWithURL: imageURL
+                        placeholderImage:nil];
         
-        [_chaptersTableView reloadData];
+        [self.chaptersTableView reloadData];
+        
     }];
     
     UIImage *coverImage = TWImage(self.courses.coverImagePath);
