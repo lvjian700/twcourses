@@ -5,7 +5,9 @@
 //
 
 #import <Availability.h>
+#import <RestKit/RestKit.h>
 #import "TWDefines.h"
+#import <objc/runtime.h>
 
 #ifndef __IPHONE_5_0
 #warning "This project uses features only available in iOS SDK 5.0 and later."

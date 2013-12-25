@@ -42,13 +42,14 @@ See Podfile
 所有API以 _http://hostname:port/api/_ 开始
 
 	var course = {
-		id: '',
+		_id: '',
 		name: '',
 		author: '',
 		overview: '',
 		coverImagePath: '',
 		created_at: date,
 		chapters: [{
+			_id: '',
 			name: '',
 			chapterNumber: integer,
 			videoPath: '',
@@ -56,6 +57,7 @@ See Podfile
 			codePath: '',
 			created_at: date
 		}, {
+			_id: '',
 			name: '',
 			chapterNumber: integer,
 			videoPath: '',
@@ -71,27 +73,12 @@ See Podfile
 url: courses/	
 
 	var course = {
-		id: '',
+		_id: '',
 		name: '',
 		author: '',
 		overview: '',
 		coverImagePath: '',
-		created_at: date,
-		chapters: [{
-			name: '',
-			chapterNumber: integer,
-			videoPath: '',
-			assignmentPath: '',
-			codePath: '',
-			created_at: date
-		}, {
-			name: '',
-			chapterNumber: integer,
-			videoPath: '',
-			assignmentPath: '',
-			codePath: '',
-			created_at: date
-		}]
+		created_at: date
 	}
 
 ###课程详细信息，包含章节列表
@@ -102,13 +89,14 @@ parameter:
 * name: 章节名称	
 
 	{
-		id: '',
+		_id: '',
 		name: '',
 		author: '',
 		overview: '',
 		coverImagePath: '',
 		created_at: date,
 		chapters: [{
+			_id: '',
 			name: '',
 			chapterNumber: integer,
 			videoPath: '',
@@ -116,6 +104,7 @@ parameter:
 			codePath: '',
 			created_at: date
 		}, {
+			_id: '',
 			name: '',
 			chapterNumber: integer,
 			videoPath: '',

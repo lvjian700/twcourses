@@ -46,6 +46,7 @@
 		4927DD0F1865EC50001E750A /* TWChapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWChapter.m; path = modules/TWChapter.m; sourceTree = "<group>"; };
 		4927DD121865EC5D001E750A /* TWCoursesDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCoursesDetailsViewController.h; sourceTree = "<group>"; };
 		4927DD131865EC5D001E750A /* TWCoursesDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCoursesDetailsViewController.m; sourceTree = "<group>"; };
+		496CEDB6186970F7006BED0E /* TWRKModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWRKModule.h; path = modules/TWRKModule.h; sourceTree = "<group>"; };
 		499464F018671C05003C22CB /* stanford.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stanford.png; path = images/stanford.png; sourceTree = "<group>"; };
 		499464F318671CF5003C22CB /* TWDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWDefines.h; sourceTree = "<group>"; };
 		49DE68801865A766008846C9 /* twcourses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twcourses.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +210,7 @@
 				4927DD0D1865EC50001E750A /* TWCourses.m */,
 				4927DD0E1865EC50001E750A /* TWChapter.h */,
 				4927DD0F1865EC50001E750A /* TWChapter.m */,
+				496CEDB6186970F7006BED0E /* TWRKModule.h */,
 			);
 			name = modules;
 			sourceTree = "<group>";

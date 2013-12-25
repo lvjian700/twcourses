@@ -7,10 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TWRKModule.h"
 
-@interface TWChapter : NSObject
+@interface TWChapter : NSObject<TWRKModule>
 
+@property(copy, nonatomic) NSString *_id;
 @property(copy, nonatomic) NSString *name;
+@property(copy, nonatomic) NSString *videoPath;
+@property(copy, nonatomic) NSString *assignmentPath;
+@property(copy, nonatomic) NSString *codePath;
+@property(copy, nonatomic) NSDate *created_at;
+
 @property(nonatomic) NSInteger chapterNumber;
 
 @end

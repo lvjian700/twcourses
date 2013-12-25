@@ -10,4 +10,34 @@
 
 @implementation TWChapter
 
+
++ (RKObjectMapping *) objectMapping {
+    NSDictionary *mapping = @{
+       @"_id": @"_id",
+       @"name": @"name",
+       @"chapterNumber": @"chapterNumber",
+       @"videoPath": @"videoPath",
+       @"assignmentPath": @"assignmentPath",
+       @"codePath": @"codePath",
+       @"created_at": @"created_at"
+    };
+    
+    
+    RKObjectMapping *objectMapping = [RKObjectMapping mappingForClass:[TWChapter class]];
+    [objectMapping addAttributeMappingsFromDictionary:mapping];
+    
+    return objectMapping;
+}
+
++ (void) addToObjectManager:(RKObjectManager *)manager {
+    RKObjectMapping *objectMapping = [TWChapter objectMapping];
+    RKResponseDescriptor *resp = [RKResponseDescriptor responseDescriptorWithMapping:objectMapping
+                                                                               method:RKRequestMethodGET
+                                                                          pathPattern:@"courses/:name/chapters"
+                                                                              keyPath:nil
+                                                                          statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+                                  
+    [manager addResponseDescriptor:resp];
+}
+
 @end

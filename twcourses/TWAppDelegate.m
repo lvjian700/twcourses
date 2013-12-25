@@ -7,12 +7,35 @@
 //
 
 #import "TWAppDelegate.h"
+#import "TWCourses.h"
 
 @implementation TWAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //	RKLogConfigureByName("RestKit", RKLogLevelWarning);
+    //  RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
+    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+    
     // Override point for customization after application launch.
+    RKObjectManager* objectManager = [RKObjectManager managerWithBaseURL:TWCoursesAPIURL];
+	[AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+	[objectManager setRequestSerializationMIMEType:RKMIMETypeJSON];
+	
+	// response date formatter
+	NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:TWDateFormatTimeZone];
+    [[RKValueTransformer defaultValueTransformer] insertValueTransformer:formatter atIndex:0];
+    
+    // registe mapping
+    [TWChapter addToObjectManager:TWClient];
+    [TWCourses addToObjectManager:TWClient];
+    
+    [TWCourses loadAll:^(NSArray *courses) {
+        DLog(@"load all courses success");
+    }];
+    
+    
     return YES;
 }
 							
