@@ -75,6 +75,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="qFl-hD-Yv6"/>
                     <connections>
+                        <outlet property="chaptersTableView" destination="LQJ-Sz-hIK" id="KEe-tM-h9i"/>
                         <outlet property="coverImageView" destination="DJ9-Ne-XWK" id="RXq-45-eNu"/>
                         <outlet property="overviewTextView" destination="bYb-bi-ro1" id="Kev-TZ-KdB"/>
                     </connections>

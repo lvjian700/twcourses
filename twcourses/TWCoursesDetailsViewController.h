@@ -12,7 +12,7 @@
 @interface TWCoursesDetailsViewController : UITableViewController
 
 @property (strong, nonatomic) TWCourses *courses;
-@property (strong, nonatomic) IBOutlet UITableView *sectionTableView;
+@property (strong, nonatomic) IBOutlet UITableView *chaptersTableView;
 @property (strong, nonatomic) IBOutlet UIImageView *coverImageView;
 @property (strong, nonatomic) IBOutlet UITextView *overviewTextView;
 
