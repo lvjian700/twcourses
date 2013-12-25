@@ -12,13 +12,11 @@
 #import "TWRKModule.h"
 
 
-@interface TWCourses : NSObject <TWRKModule>
-
-+ (TWCourses *) coursesFromRemote;
+@interface TWCourses : NSObject <TWRestKitModule>
 
 + (void) loadAll: (void (^) (NSArray *courses) ) success;
 + (void) findOneByName: (NSString *) name
-            sucess: (void (^) (TWCourses *courses) ) success;
+            success: (void (^) (TWCourses *courses) ) success;
 
 @property (copy, nonatomic) NSString *_id;
 @property (copy, nonatomic) NSString *name;
@@ -27,6 +25,6 @@
 @property (copy, nonatomic) NSString *coverImagePath;
 @property (copy, nonatomic) NSDate *created_at;
 
-@property (copy, nonatomic) NSArray *chapters;
+@property (strong, nonatomic) NSArray *chapters;
 
 @end

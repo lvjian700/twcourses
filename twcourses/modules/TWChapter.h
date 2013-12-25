@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "TWRKModule.h"
 
-@interface TWChapter : NSObject<TWRKModule>
+@interface TWChapter : NSObject<TWRestKitModule>
 
 @property(copy, nonatomic) NSString *_id;
 @property(copy, nonatomic) NSString *name;

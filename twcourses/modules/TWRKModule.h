@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol TWRKModule <NSObject>
+@protocol TWRestKitModule <NSObject>
 
 + (void) addToObjectManager: (RKObjectManager *) manager;
 + (RKObjectMapping *) objectMapping;

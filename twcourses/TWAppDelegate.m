@@ -31,11 +31,6 @@
     [TWChapter addToObjectManager:TWClient];
     [TWCourses addToObjectManager:TWClient];
     
-    [TWCourses loadAll:^(NSArray *courses) {
-        DLog(@"load all courses success");
-    }];
-    
-    
     return YES;
 }
 							
