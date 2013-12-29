@@ -1,25 +1,34 @@
 //
-//  TWSectionViewController.m
+//  TWCoursesViewController.m
 //  twcourses
 //
-//  Created by lvjian on 12/21/13.
+//  Created by twer on 12/30/13.
 //  Copyright (c) 2013 xi'an thoughtworks. All rights reserved.
 //
 
-#import "TWCoursesDetailsViewController.h"
-#import <SDWebImage/SDWebImageManager.h>
+#import "TWCoursesViewController.h"
 
-@interface TWCoursesDetailsViewController ()
+@interface TWCoursesViewController ()
 
 @end
 
-@implementation TWCoursesDetailsViewController
+@implementation TWCoursesViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        NSLog(@"init with Style");
+        //customise code here
+    }
+    return self;
+}
+
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.title = @"warlock's course";
+        // customise code
     }
     return self;
 }
@@ -27,32 +36,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    [TWCourses findOneByName:@"nodea" success:^(TWCourses *courses) {
-        _courses = courses;
-        
-        self.navigationController.navigationBar.topItem.title = _courses.name;
-        _overviewTextView.text = _courses.overview;
-      
-        NSString *imagePath = [NSString stringWithFormat:@"%@%@", TWCoursesRootPath, _courses.coverImagePath];
-        DLog(@"-image path: %@", imagePath);
-        NSURL *imageURL = [NSURL URLWithString: imagePath];
-        [_coverImageView setImageWithURL: imageURL
-                        placeholderImage:nil];
-        
-        [self.chaptersTableView reloadData];
-        
+    [TWCourses loadAll:^(NSArray *courses) {
+        _courses_list = courses;
+        NSLog(@"load data successfully");
+        [self.tableView reloadData];
     }];
-    
-    UIImage *coverImage = TWImage(self.courses.coverImagePath);
-    self.coverImageView.image = coverImage;
-    self.overviewTextView.text = self.courses.overview;
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSLog(@"view did load , courses number : %i" , [_courses_list count]);
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,22 +54,31 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.courses.chapters count];
+    // Return the number of rows in the section.
+    NSInteger result = [_courses_list count];
+    NSLog(@"courses number : %i" , result);
+    return result;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *SectionCellIdentifier = @"SectionTableCell";
+    static NSString *CellIdentifier = @"Cell";
+    TWCoursesCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    TWCourses *current_course = [_courses_list objectAtIndex:indexPath.row];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SectionCellIdentifier forIndexPath:indexPath];
-    
-    TWChapter *module = [self.courses.chapters objectAtIndex:indexPath.row];
-    cell.textLabel.text = module.name;
+    NSString *imagePath = [NSString stringWithFormat:@"%@%@", TWCoursesRootPath, current_course.coverImagePath];
+    DLog(@"-image path: %@", imagePath);
+    NSURL *imageURL = [NSURL URLWithString: imagePath];
+    [cell.course_image setImageWithURL: imageURL placeholderImage:nil];
+    cell.course_name.text = current_course.name;
+    cell.course_author.text = [NSString stringWithFormat:@"作者:%@", current_course.author];
+    // Configure the cell...
     
     return cell;
 }
