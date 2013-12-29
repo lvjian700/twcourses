@@ -81,6 +81,7 @@
     
     TWChapter *module = [self.courses.chapters objectAtIndex:indexPath.row];
     cell.textLabel.text = module.name;
+	cell.detailTextLabel.text = [module.videoLength stringValueOfMinite];
     
     return cell;
 }

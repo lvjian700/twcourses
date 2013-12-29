@@ -19,5 +19,6 @@
 @property(copy, nonatomic) NSDate *created_at;
 
 @property(nonatomic) NSInteger chapterNumber;
+@property(copy, nonatomic) NSNumber *videoLength;
 
 @end

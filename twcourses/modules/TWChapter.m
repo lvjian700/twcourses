@@ -19,6 +19,7 @@
        @"videoPath": @"videoPath",
        @"assignmentPath": @"assignmentPath",
        @"codePath": @"codePath",
+	   @"videoLength": @"videoLength",
        @"created_at": @"created_at"
     };
     

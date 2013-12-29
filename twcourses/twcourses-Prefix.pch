@@ -8,6 +8,7 @@
 #import <RestKit/RestKit.h>
 #import "TWDefines.h"
 #import <objc/runtime.h>
+#import "NSNumber+TWVideoLength.h"
 
 // improve ui
 #import <SDWebImage/UIImageView+WebCache.h>

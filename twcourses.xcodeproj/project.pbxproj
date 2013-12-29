@@ -19,7 +19,6 @@
 		49DE688E1865A766008846C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49DE688C1865A766008846C9 /* InfoPlist.strings */; };
 		49DE68901865A766008846C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DE688F1865A766008846C9 /* main.m */; };
 		49DE68941865A766008846C9 /* TWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DE68931865A766008846C9 /* TWAppDelegate.m */; };
-		49DE68971865A766008846C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DE68951865A766008846C9 /* Main.storyboard */; };
 		49DE689A1865A766008846C9 /* TWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DE68991865A766008846C9 /* TWViewController.m */; };
 		49DE689C1865A766008846C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49DE689B1865A766008846C9 /* Images.xcassets */; };
 		49DE68A31865A766008846C9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE68A21865A766008846C9 /* XCTest.framework */; };
@@ -28,6 +27,8 @@
 		49DE68AD1865A766008846C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49DE68AB1865A766008846C9 /* InfoPlist.strings */; };
 		49DE68AF1865A766008846C9 /* twcoursesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DE68AE1865A766008846C9 /* twcoursesTests.m */; };
 		49DE68BA1865C015008846C9 /* sections_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DE68B91865C015008846C9 /* sections_Storyboard.storyboard */; };
+		939B3ECE18705D440020C15C /* NSNumber+TWVideoLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 939B3ECD18705D440020C15C /* NSNumber+TWVideoLength.m */; };
+		939B3ED11870608E0020C15C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 939B3ED31870608E0020C15C /* Localizable.strings */; };
 		AA5A22DE641F4CE698DAF79C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F5CBAC593D4765ABC16B75 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +66,6 @@
 		49DE68911865A766008846C9 /* twcourses-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "twcourses-Prefix.pch"; sourceTree = "<group>"; };
 		49DE68921865A766008846C9 /* TWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWAppDelegate.h; sourceTree = "<group>"; };
 		49DE68931865A766008846C9 /* TWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWAppDelegate.m; sourceTree = "<group>"; };
-		49DE68961865A766008846C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49DE68981865A766008846C9 /* TWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWViewController.h; sourceTree = "<group>"; };
 		49DE68991865A766008846C9 /* TWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWViewController.m; sourceTree = "<group>"; };
 		49DE689B1865A766008846C9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -75,6 +75,10 @@
 		49DE68AC1865A766008846C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49DE68AE1865A766008846C9 /* twcoursesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = twcoursesTests.m; sourceTree = "<group>"; };
 		49DE68B91865C015008846C9 /* sections_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = sections_Storyboard.storyboard; sourceTree = "<group>"; };
+		939B3ECC18705D440020C15C /* NSNumber+TWVideoLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+TWVideoLength.h"; path = "utils/NSNumber+TWVideoLength.h"; sourceTree = "<group>"; };
+		939B3ECD18705D440020C15C /* NSNumber+TWVideoLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+TWVideoLength.m"; path = "utils/NSNumber+TWVideoLength.m"; sourceTree = "<group>"; };
+		939B3ED5187060D60020C15C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		939B3ED61870622A0020C15C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		AC6088D3188A416C8FA266BC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		E9F5CBAC593D4765ABC16B75 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -115,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				499464F318671CF5003C22CB /* TWDefines.h */,
+				939B3ECC18705D440020C15C /* NSNumber+TWVideoLength.h */,
+				939B3ECD18705D440020C15C /* NSNumber+TWVideoLength.m */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -181,6 +187,7 @@
 				49DE688C1865A766008846C9 /* InfoPlist.strings */,
 				49DE688F1865A766008846C9 /* main.m */,
 				49DE68911865A766008846C9 /* twcourses-Prefix.pch */,
+				939B3ED31870608E0020C15C /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -206,7 +213,6 @@
 		49DE68B81865BF6B008846C9 /* storyborads */ = {
 			isa = PBXGroup;
 			children = (
-				49DE68951865A766008846C9 /* Main.storyboard */,
 				49DE68B91865C015008846C9 /* sections_Storyboard.storyboard */,
 				4966B8D21870AE10005B1804 /* chapters_Storyboard.storyboard */,
 			);
@@ -290,6 +296,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 49DE68771865A766008846C9;
 			productRefGroup = 49DE68811865A766008846C9 /* Products */;
@@ -308,10 +315,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4966B8D31870AE10005B1804 /* chapters_Storyboard.storyboard in Resources */,
+				939B3ED11870608E0020C15C /* Localizable.strings in Resources */,
 				49DE689C1865A766008846C9 /* Images.xcassets in Resources */,
 				49DE68BA1865C015008846C9 /* sections_Storyboard.storyboard in Resources */,
 				49DE688E1865A766008846C9 /* InfoPlist.strings in Resources */,
-				49DE68971865A766008846C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +375,7 @@
 				4966B8D61870B4B1005B1804 /* TWCoursesViewController.m in Sources */,
 				4927DD101865EC50001E750A /* TWCourses.m in Sources */,
 				4927DD111865EC50001E750A /* TWChapter.m in Sources */,
+				939B3ECE18705D440020C15C /* NSNumber+TWVideoLength.m in Sources */,
 				49DE68941865A766008846C9 /* TWAppDelegate.m in Sources */,
 				4927DD141865EC5D001E750A /* TWCoursesDetailsViewController.m in Sources */,
 				49DE689A1865A766008846C9 /* TWViewController.m in Sources */,
@@ -401,20 +409,21 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		49DE68951865A766008846C9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				49DE68961865A766008846C9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		49DE68AB1865A766008846C9 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				49DE68AC1865A766008846C9 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		939B3ED31870608E0020C15C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				939B3ED5187060D60020C15C /* en */,
+				939B3ED61870622A0020C15C /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
