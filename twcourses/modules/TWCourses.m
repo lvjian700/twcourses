@@ -28,8 +28,9 @@
 }
 
 + (void) findOneByName:(NSString *)name success:(void (^)(TWCourses *))success {
-    
-    NSString *path = [NSString stringWithFormat:TWCoursesLoadPathByName, name];
+   
+	NSString *escapedName = [name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *path = [NSString stringWithFormat:TWCoursesLoadPathByName, escapedName];
     
     [TWClient getObject:nil path:path parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         DLog(@"load courses details by name");
