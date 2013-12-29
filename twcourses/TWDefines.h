@@ -21,5 +21,7 @@
 // Object
 #define TWImage(x) [UIImage imageNamed:x]
 #define TWClient [RKObjectManager sharedManager]
+#define TWStoryboard(name) [UIStoryboard storyboardWithName:name bundle:nil]
+#define TWController(storyboard, controllerID) [[UIStoryboard storyboardWithName:storyboard bundle:nil] instantiateViewControllerWithIdentifier: controllerID]
 
 #endif

@@ -36,6 +36,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+	_coursesDetailsViewController = TWController(@"sections_Storyboard", @"coursesDetailsViewController");
+	
     [TWCourses loadAll:^(NSArray *courses) {
         _courses_list = courses;
         NSLog(@"load data successfully");
@@ -81,6 +84,18 @@
     // Configure the cell...
     
     return cell;
+}
+
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	TWCourses *selected = [_courses_list objectAtIndex:indexPath.row];
+	NSString *name = selected.name;
+	DLog(@"--selectedCourses: %@", name);
+	
+	[TWCourses findOneByName:name success:^(TWCourses *courses) {
+		_coursesDetailsViewController.courses = courses;
+		[self.navigationController pushViewController:_coursesDetailsViewController animated:YES];
+	}];
 }
 
 /*

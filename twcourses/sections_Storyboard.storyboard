@@ -25,7 +25,7 @@
         <!--Courses Details View Controller-->
         <scene sceneID="LK0-SZ-ywY">
             <objects>
-                <tableViewController id="e5Y-6j-O0o" customClass="TWCoursesDetailsViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="coursesDetailsViewController" id="e5Y-6j-O0o" customClass="TWCoursesDetailsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LQJ-Sz-hIK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

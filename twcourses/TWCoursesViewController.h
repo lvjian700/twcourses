@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "TWCourses.h"
 #import "TWCoursesCell.h"
+#import "TWCoursesDetailsViewController.h"
 
-@interface TWCoursesViewController : UITableViewController
+@interface TWCoursesViewController : UITableViewController {
+		
+	TWCoursesDetailsViewController *_coursesDetailsViewController;
+}
 @property (strong, nonatomic) TWCourses *courses;
 @property (strong, nonatomic) NSArray *courses_list;
 

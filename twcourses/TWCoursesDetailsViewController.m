@@ -11,6 +11,7 @@
 
 @interface TWCoursesDetailsViewController ()
 
+-(void) refreshView;
 @end
 
 @implementation TWCoursesDetailsViewController
@@ -24,30 +25,29 @@
     return self;
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+	
+	[self refreshView];
+}
+
+- (void) refreshView {
+	self.navigationItem.title = _courses.name;
+	_overviewTextView.text = _courses.overview;
+	
+	NSString *imagePath = [NSString stringWithFormat:@"%@%@", TWCoursesRootPath, _courses.coverImagePath];
+	DLog(@"-image path: %@", imagePath);
+	NSURL *imageURL = [NSURL URLWithString: imagePath];
+	[_coverImageView setImageWithURL: imageURL
+					placeholderImage:nil];
+        
+	[self.chaptersTableView reloadData];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    [TWCourses findOneByName:@"nodea" success:^(TWCourses *courses) {
-        _courses = courses;
-        
-        self.navigationController.navigationBar.topItem.title = _courses.name;
-        _overviewTextView.text = _courses.overview;
-      
-        NSString *imagePath = [NSString stringWithFormat:@"%@%@", TWCoursesRootPath, _courses.coverImagePath];
-        DLog(@"-image path: %@", imagePath);
-        NSURL *imageURL = [NSURL URLWithString: imagePath];
-        [_coverImageView setImageWithURL: imageURL
-                        placeholderImage:nil];
-        
-        [self.chaptersTableView reloadData];
-        
-    }];
     
-    UIImage *coverImage = TWImage(self.courses.coverImagePath);
-    self.coverImageView.image = coverImage;
-    self.overviewTextView.text = self.courses.overview;
-
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
