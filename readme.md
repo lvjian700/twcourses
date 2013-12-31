@@ -25,6 +25,7 @@ App Back-end Server
 * 一个Story一个Storyboard文件，避免多人修改同一个Storyboard,避免git merge. 
 * 所有storyboard放到storyboards group下
 * 所有 #define 以__TW__开头,并且#define 放到 _utils/TWDefines.h_ 中.
+* 日志使用DLog, 不要使用NSLog. DLog定义在 _twcourses-Prefix.pch_ 中.
 
 ##Libraries
 ---
