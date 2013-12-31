@@ -89,4 +89,8 @@
                                                        method:RKRequestMethodGET]];
 }
 
+- (NSString *) coverImagePath {
+    return [_coverImagePath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+}
+
 @end
