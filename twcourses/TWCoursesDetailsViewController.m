@@ -11,6 +11,7 @@
 
 @interface TWCoursesDetailsViewController ()
 
+-(void) onRefresh: (id)control;
 -(void) refreshView;
 @end
 
@@ -30,6 +31,18 @@
 	[self refreshView];
 }
 
+- (void) onRefresh: (id)control {
+    NSString *name = _courses.name;
+    
+    [TWCourses findOneByName:name success:^(TWCourses *courses) {
+        self.courses = courses;
+        if ([control respondsToSelector:@selector(endRefreshing)]) {
+            [control endRefreshing];
+        }
+	}];
+
+}
+
 - (void) refreshView {
 	self.navigationItem.title = _courses.name;
 	_overviewTextView.text = _courses.overview;
@@ -46,6 +59,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(onRefresh:) forControlEvents:UIControlEventValueChanged];
 
     
     // Uncomment the following line to preserve selection between presentations.
@@ -60,6 +76,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 #pragma mark - Table view data source
 

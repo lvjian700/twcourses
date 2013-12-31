@@ -9,7 +9,7 @@
 #import "TWCoursesViewController.h"
 
 @interface TWCoursesViewController ()
-
+- (void) refresh: (id) control;
 @end
 
 @implementation TWCoursesViewController
@@ -38,6 +38,11 @@
     [super viewDidLoad];
 	
 	_coursesDetailsViewController = TWController(@"sections_Storyboard", @"coursesDetailsViewController");
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self
+                            action:@selector(refresh:)
+                  forControlEvents:UIControlEventValueChanged];
 	
     [TWCourses loadAll:^(NSArray *courses) {
         _courses_list = courses;
@@ -51,6 +56,17 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) refresh:(id)control {
+    [TWCourses loadAll:^(NSArray *courses) {
+        _courses_list = courses;
+        [self.tableView reloadData];
+        
+        if ([control respondsToSelector:@selector(endRefreshing)]) {
+            [control endRefreshing];
+        }
+    }];
 }
 
 #pragma mark - Table view data source
