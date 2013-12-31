@@ -53,6 +53,7 @@ See Podfile
 			name: '',
 			chapterNumber: integer,
 			videoPath: '',
+			videoLength: 0,//sec
 			assignmentPath: '',
 			codePath: '',
 			created_at: date
@@ -61,6 +62,7 @@ See Podfile
 			name: '',
 			chapterNumber: integer,
 			videoPath: '',
+			videoLength: 0,//sec
 			assignmentPath: '',
 			codePath: '',
 			created_at: date
@@ -85,8 +87,7 @@ url: courses/
 
 url: courses/:name  
 parameter:	
-
-* name: 章节名称	
+* name: 章节名称		 
 
 	{
 		_id: '',
@@ -100,6 +101,7 @@ parameter:
 			name: '',
 			chapterNumber: integer,
 			videoPath: '',
+			videoLength: 0,//sec
 			assignmentPath: '',
 			codePath: '',
 			created_at: date
@@ -108,11 +110,14 @@ parameter:
 			name: '',
 			chapterNumber: integer,
 			videoPath: '',
+			videoLength: 0,//sec
 			assignmentPath: '',
 			codePath: '',
 			created_at: date
 		}]
 	}	
+
+
 
 	
 
