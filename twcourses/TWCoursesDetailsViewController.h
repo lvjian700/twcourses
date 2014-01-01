@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "TWCourses.h"
+#import "TWChaptersDetailsViewController.h"
 
 @interface TWCoursesDetailsViewController : UITableViewController
-
+{
+    TWChaptersDetailsViewController *_chaptersDetailsViewController;
+}
 @property (strong, nonatomic) TWCourses *courses;
 @property (strong, nonatomic) IBOutlet UITableView *chaptersTableView;
 @property (strong, nonatomic) IBOutlet UIImageView *coverImageView;

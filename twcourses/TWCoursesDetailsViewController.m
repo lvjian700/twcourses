@@ -59,7 +59,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
+    _chaptersDetailsViewController = TWController(@"chapter_Storyboard", @"chaptersDetailsViewController");
+
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(onRefresh:) forControlEvents:UIControlEventValueChanged];
 
@@ -101,6 +103,16 @@
 	cell.detailTextLabel.text = [module.videoLength stringValueOfMinite];
     
     return cell;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    TWChapter *selectedChapter = [self.courses.chapters objectAtIndex:indexPath.row];
+
+    NSString *name = selectedChapter.name;
+    DLog(@"--selected chapter: %@", name);
+
+    _chaptersDetailsViewController.chapter = selectedChapter;
+    [self.navigationController pushViewController:_chaptersDetailsViewController animated:YES];
 }
 
 /*
