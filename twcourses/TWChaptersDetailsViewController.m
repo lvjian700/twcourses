@@ -46,12 +46,8 @@
 }
 
 -(void) loadVideoImage {
-//    NSString *path = @"ftp://dygod1:dygod1@d135.dygod.org:7031/%E6%B0%B8%E6%97%A0%E6%AD%A2%E5%A2%83.[%E4%B8%AD%E8%8B%B1%E5%8F%8C%E5%AD%97.1024%E5%88%86%E8%BE%A8%E7%8E%87]/[%E7%94%B5%E5%BD%B1%E5%A4%A9%E5%A0%82www.dy2018.net]%E6%B0%B8%E6%97%A0%E6%AD%A2%E5%A2%83BD%E4%B8%AD%E8%8B%B1%E5%8F%8C%E5%AD%97.rmvb";
-    
-//    NSBundle *bundle = [NSBundle mainBundle];
-//    NSString *path = [bundle pathForResource:@"Roar" ofType:@"m4v"];
-
-    NSString *path = @"http://10.29.2.82:8000/Roar.m4v";
+//    NSString *path = @"http://10.29.2.180/Roar.m4v";
+    NSString *path = _chapter.videoPath;
     
     movieController = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL URLWithString:path]];
     NSMutableArray * allThumbnails = [NSMutableArray  arrayWithObjects:[NSNumber numberWithDouble:5.0],nil];
@@ -60,13 +56,14 @@
 
 -(void)movieThumbnailLoadComplete:(NSNotification*)notification
 {
-    NSLog(@"**************************");
-    
     NSDictionary *userInfo = [notification userInfo];
-    NSNumber *timecode =[userInfo objectForKey: @"MPMoviePlayerThumbnailTimeKey"];
     UIImage *image =[userInfo objectForKey: @"MPMoviePlayerThumbnailImageKey"];
     NSError *error =[userInfo objectForKey: @"MPMoviePlayerThumbnailErrorKey"];
-	_videoImageView.image = image;
+    if (error == nil) {
+        _videoImageView.image = image;
+    } else {
+        DLog(@"--- fetching image fails.");
+    }
 }
 
 
