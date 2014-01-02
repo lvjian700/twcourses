@@ -69,4 +69,20 @@
     return cell;
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *urlString;
+    switch (indexPath.row) {
+        case 0:
+            urlString = _chapter.codePath;
+            break;
+        case 1:
+            urlString = _chapter.assignmentPath;
+            break;
+        default:
+            break;
+    }
+    NSURL *url = [NSURL URLWithString:urlString];
+    [[UIApplication sharedApplication] openURL:url];
+}
+
 @end
