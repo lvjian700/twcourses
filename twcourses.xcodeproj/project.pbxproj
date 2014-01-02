@@ -15,6 +15,8 @@
 		4966B8D31870AE10005B1804 /* chapters_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4966B8D21870AE10005B1804 /* chapters_Storyboard.storyboard */; };
 		4966B8D61870B4B1005B1804 /* TWCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4966B8D51870B4B1005B1804 /* TWCoursesViewController.m */; };
 		4966B8D91870B56D005B1804 /* TWCoursesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4966B8D81870B56D005B1804 /* TWCoursesCell.m */; };
+		498961F518752F140024A1EB /* Roar.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 498961F418752F140024A1EB /* Roar.m4v */; };
+		49A090611873D300004007CC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A090601873D300004007CC /* MediaPlayer.framework */; };
 		49DE68841865A766008846C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE68831865A766008846C9 /* Foundation.framework */; };
 		49DE68861865A766008846C9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE68851865A766008846C9 /* CoreGraphics.framework */; };
 		49DE68881865A766008846C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DE68871865A766008846C9 /* UIKit.framework */; };
@@ -60,7 +62,9 @@
 		4966B8D71870B56D005B1804 /* TWCoursesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCoursesCell.h; sourceTree = "<group>"; };
 		4966B8D81870B56D005B1804 /* TWCoursesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCoursesCell.m; sourceTree = "<group>"; };
 		496CEDB6186970F7006BED0E /* TWRKModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWRKModule.h; path = modules/TWRKModule.h; sourceTree = "<group>"; };
+		498961F418752F140024A1EB /* Roar.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = Roar.m4v; path = ../../../Downloads/Roar.m4v; sourceTree = "<group>"; };
 		499464F318671CF5003C22CB /* TWDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWDefines.h; sourceTree = "<group>"; };
+		49A090601873D300004007CC /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		49DE68801865A766008846C9 /* twcourses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twcourses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DE68831865A766008846C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		49DE68851865A766008846C9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -93,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A090611873D300004007CC /* MediaPlayer.framework in Frameworks */,
 				49DE68861865A766008846C9 /* CoreGraphics.framework in Frameworks */,
 				49DE68881865A766008846C9 /* UIKit.framework in Frameworks */,
 				49DE68841865A766008846C9 /* Foundation.framework in Frameworks */,
@@ -133,6 +138,7 @@
 		49DE68771865A766008846C9 = {
 			isa = PBXGroup;
 			children = (
+				498961F418752F140024A1EB /* Roar.m4v */,
 				499464EF18671BEB003C22CB /* images */,
 				49DE68891865A766008846C9 /* twcourses */,
 				49DE68A81865A766008846C9 /* twcoursesTests */,
@@ -154,6 +160,7 @@
 		49DE68821865A766008846C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49A090601873D300004007CC /* MediaPlayer.framework */,
 				49DE68831865A766008846C9 /* Foundation.framework */,
 				49DE68851865A766008846C9 /* CoreGraphics.framework */,
 				49DE68871865A766008846C9 /* UIKit.framework */,
@@ -293,7 +300,7 @@
 						DevelopmentTeam = C85KQG8PYQ;
 					};
 					49DE68A01865A766008846C9 = {
-						TestTargetID = 49DE687F1865A766008846C9 /* twcourses */;
+						TestTargetID = 49DE687F1865A766008846C9;
 					};
 				};
 			};
@@ -324,6 +331,7 @@
 			files = (
 				4966B8D31870AE10005B1804 /* chapters_Storyboard.storyboard in Resources */,
 				49628A5F18739E930017D12D /* chapter_Storyboard.storyboard in Resources */,
+				498961F518752F140024A1EB /* Roar.m4v in Resources */,
 				939B3ED11870608E0020C15C /* Localizable.strings in Resources */,
 				49DE689C1865A766008846C9 /* Images.xcassets in Resources */,
 				49DE68BA1865C015008846C9 /* sections_Storyboard.storyboard in Resources */,

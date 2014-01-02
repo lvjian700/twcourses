@@ -12,22 +12,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="QWm-r2-jf8">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="217"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="GTc-SX-V6v">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="292"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="首帧图片" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wv1-RC-oO3">
-                                    <rect key="frame" x="123" y="98" width="68" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        </view>
+                        </imageView>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChapterTableCell" textLabel="fpl-ko-bd1" detailTextLabel="Q21-CX-eNG" style="IBUITableViewCellStyleValue1" id="uZm-fa-QaQ">
-                                <rect key="frame" x="0.0" y="239" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="314" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uZm-fa-QaQ" id="RmY-8H-KhQ">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -58,6 +49,7 @@
                     </tableView>
                     <connections>
                         <outlet property="chapterDetailsTableView" destination="ag0-0m-bOa" id="XMQ-R2-PQO"/>
+                        <outlet property="videoImageView" destination="GTc-SX-V6v" id="gd5-Ir-93u"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1I-Pj-8pJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
