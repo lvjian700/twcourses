@@ -13,6 +13,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x00bfff)];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: UIColorFromRGB(0xffffff)}];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
+
     //	RKLogConfigureByName("RestKit", RKLogLevelWarning);
     //  RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
     RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
