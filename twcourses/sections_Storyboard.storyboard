@@ -80,8 +80,15 @@
                             <outlet property="delegate" destination="e5Y-6j-O0o" id="cwi-mi-BHZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="qFl-hD-Yv6"/>
+                    <navigationItem key="navigationItem" id="qFl-hD-Yv6">
+                        <barButtonItem key="rightBarButtonItem" title="收藏" id="6qd-cu-DJT">
+                            <connections>
+                                <action selector="changeFavourStatus:" destination="e5Y-6j-O0o" id="L4X-bf-c1p"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="addFavourItem" destination="6qd-cu-DJT" id="IDH-P3-Ttb"/>
                         <outlet property="chaptersTableView" destination="LQJ-Sz-hIK" id="KEe-tM-h9i"/>
                         <outlet property="coverImageView" destination="DJ9-Ne-XWK" id="RXq-45-eNu"/>
                         <outlet property="overviewTextView" destination="bYb-bi-ro1" id="Kev-TZ-KdB"/>

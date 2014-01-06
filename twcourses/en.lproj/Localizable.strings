@@ -1,1 +1,4 @@
-"min"="分钟";
+"min"="min";
+"item.favour"="Favours";
+"favour.add.success"="Favour Success!";
+"favour.canel.success"="Cancel Favour Success!";

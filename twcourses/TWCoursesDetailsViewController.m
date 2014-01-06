@@ -24,10 +24,14 @@
         // Custom initialization
     }
     return self;
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated {
 	
+    if (self.courses.isFavoured) {
+        
+    }
 	[self refreshView];
 }
 
@@ -64,7 +68,6 @@
 
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(onRefresh:) forControlEvents:UIControlEventValueChanged];
-
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -166,4 +169,17 @@
 
  */
 
+- (IBAction)changeFavourStatus:(id)sender {
+    _courses.isFavoured = !_courses.isFavoured;
+
+    if (_courses.isFavoured) {
+        
+        [SVProgressHUD showSuccessWithStatus:NSLocalizedString(@"favour.add.success", @"添加收藏成功")];
+        _addFavourItem.title = @"取消收藏";
+        return;
+    }
+    
+    [SVProgressHUD showSuccessWithStatus:NSLocalizedString(@"favour.cancel.success", @"取消收藏成功")];
+    _addFavourItem.title = @"收藏";
+}
 @end

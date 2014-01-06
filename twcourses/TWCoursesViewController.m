@@ -10,6 +10,7 @@
 
 @interface TWCoursesViewController ()
 - (void) refresh: (id) control;
+- (void) showFavourView: (id) sender;
 @end
 
 @implementation TWCoursesViewController
@@ -39,6 +40,13 @@
 	
 	_coursesDetailsViewController = TWController(@"sections_Storyboard", @"coursesDetailsViewController");
     
+    
+    UIBarButtonItem *favourItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"item.favour", @"已收藏")
+                                                                   style:UIBarButtonItemStyleBordered
+                                                                  target:self
+                                                                  action:@selector(showFavourView:)];
+    self.navigationItem.rightBarButtonItem = favourItem;
+    
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self
                             action:@selector(refresh:)
@@ -67,6 +75,11 @@
             [control endRefreshing];
         }
     }];
+}
+
+- (void) showFavourView:(id)sender {
+    //TODO: show favour view..
+    DLog(@"show favour...");
 }
 
 #pragma mark - Table view data source

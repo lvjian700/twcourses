@@ -19,4 +19,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *coverImageView;
 @property (strong, nonatomic) IBOutlet UITextView *overviewTextView;
 
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *addFavourItem;
+- (IBAction)changeFavourStatus:(id)sender;
+
 @end

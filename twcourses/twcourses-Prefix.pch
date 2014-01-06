@@ -9,6 +9,7 @@
 #import "TWDefines.h"
 #import <objc/runtime.h>
 #import "NSNumber+TWVideoLength.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 // improve ui
 #import <SDWebImage/UIImageView+WebCache.h>

@@ -24,6 +24,7 @@
 @property (copy, nonatomic) NSString *overview;
 @property (copy, nonatomic) NSString *coverImagePath;
 @property (copy, nonatomic) NSDate *created_at;
+@property (nonatomic) BOOL isFavoured;
 
 @property (strong, nonatomic) NSArray *chapters;
 

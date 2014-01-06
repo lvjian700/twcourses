@@ -1,2 +1,4 @@
-"min"="min";
-
+"min"="分钟";
+"item.favour"="已收藏";
+"favour.add.success"="收藏成功!";
+"favour.cancel.success"="取消收藏成功!";
