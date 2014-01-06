@@ -31,6 +31,7 @@
 		49DE68AF1865A766008846C9 /* twcoursesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DE68AE1865A766008846C9 /* twcoursesTests.m */; };
 		49DE68BA1865C015008846C9 /* sections_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DE68B91865C015008846C9 /* sections_Storyboard.storyboard */; };
 		49FBBA8E187AD9F00083222A /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FBBA8D187AD9F00083222A /* play_button.png */; };
+		49FBBA93187AF0DA0083222A /* TWVedioImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FBBA92187AF0DA0083222A /* TWVedioImageView.m */; };
 		939B3ECE18705D440020C15C /* NSNumber+TWVideoLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 939B3ECD18705D440020C15C /* NSNumber+TWVideoLength.m */; };
 		939B3ED11870608E0020C15C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 939B3ED31870608E0020C15C /* Localizable.strings */; };
 		AA5A22DE641F4CE698DAF79C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F5CBAC593D4765ABC16B75 /* libPods.a */; };
@@ -84,6 +85,8 @@
 		49DE68AE1865A766008846C9 /* twcoursesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = twcoursesTests.m; sourceTree = "<group>"; };
 		49DE68B91865C015008846C9 /* sections_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = sections_Storyboard.storyboard; sourceTree = "<group>"; };
 		49FBBA8D187AD9F00083222A /* play_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play_button.png; path = ../../../Desktop/play_button.png; sourceTree = "<group>"; };
+		49FBBA91187AF0DA0083222A /* TWVedioImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWVedioImageView.h; sourceTree = "<group>"; };
+		49FBBA92187AF0DA0083222A /* TWVedioImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWVedioImageView.m; sourceTree = "<group>"; };
 		939B3ECC18705D440020C15C /* NSNumber+TWVideoLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+TWVideoLength.h"; path = "utils/NSNumber+TWVideoLength.h"; sourceTree = "<group>"; };
 		939B3ECD18705D440020C15C /* NSNumber+TWVideoLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+TWVideoLength.m"; path = "utils/NSNumber+TWVideoLength.m"; sourceTree = "<group>"; };
 		939B3ED5187060D60020C15C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -176,6 +179,8 @@
 				499464F218671CAB003C22CB /* utils */,
 				4966B8D71870B56D005B1804 /* TWCoursesCell.h */,
 				4966B8D81870B56D005B1804 /* TWCoursesCell.m */,
+				49FBBA91187AF0DA0083222A /* TWVedioImageView.h */,
+				49FBBA92187AF0DA0083222A /* TWVedioImageView.m */,
 				4966B8D41870B4B1005B1804 /* TWCoursesViewController.h */,
 				4966B8D51870B4B1005B1804 /* TWCoursesViewController.m */,
 				4927DD121865EC5D001E750A /* TWCoursesDetailsViewController.h */,
@@ -397,6 +402,7 @@
 				4927DD141865EC5D001E750A /* TWCoursesDetailsViewController.m in Sources */,
 				49DE689A1865A766008846C9 /* TWViewController.m in Sources */,
 				368672E1A0D6E6DDE4B1E5CF /* TWChaptersDetailsViewController.m in Sources */,
+				49FBBA93187AF0DA0083222A /* TWVedioImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

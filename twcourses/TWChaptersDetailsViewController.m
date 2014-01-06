@@ -60,23 +60,11 @@
     UIImage *image =[userInfo objectForKey: @"MPMoviePlayerThumbnailImageKey"];
     NSError *error =[userInfo objectForKey: @"MPMoviePlayerThumbnailErrorKey"];
     if (error == nil) {
-        _videoImageView.image = image;
-        [self addPlayButtonSubView];
+        [_videoImageView setImage:image];
+        [_videoImageView addPlayButtonSubView];
     } else {
         DLog(@"--- fetching image fails.");
     }
-}
-
--(void)addPlayButtonSubView
-{
-    CGRect backgroundRect = [_videoImageView bounds];
-    UIImage *playButton = [UIImage imageNamed:@"play_button.png"];
-    NSInteger leftPosition = backgroundRect.size.width/2 - playButton.size.width/2;
-    NSInteger rightPosition = backgroundRect.size.height/2 - playButton.size.height/2;
-    
-    UIImageView *playButtonImageView = [[UIImageView alloc] initWithFrame:CGRectMake(leftPosition, rightPosition, playButton.size.width, playButton.size.height)];
-    [playButtonImageView setImage:playButton];
-    [_videoImageView addSubview:playButtonImageView];
 }
 
 #pragma mark - Table view data source
