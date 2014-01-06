@@ -30,6 +30,7 @@
 		49DE68AD1865A766008846C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49DE68AB1865A766008846C9 /* InfoPlist.strings */; };
 		49DE68AF1865A766008846C9 /* twcoursesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DE68AE1865A766008846C9 /* twcoursesTests.m */; };
 		49DE68BA1865C015008846C9 /* sections_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DE68B91865C015008846C9 /* sections_Storyboard.storyboard */; };
+		49FBBA8E187AD9F00083222A /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 49FBBA8D187AD9F00083222A /* play_button.png */; };
 		939B3ECE18705D440020C15C /* NSNumber+TWVideoLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 939B3ECD18705D440020C15C /* NSNumber+TWVideoLength.m */; };
 		939B3ED11870608E0020C15C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 939B3ED31870608E0020C15C /* Localizable.strings */; };
 		AA5A22DE641F4CE698DAF79C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F5CBAC593D4765ABC16B75 /* libPods.a */; };
@@ -82,6 +83,7 @@
 		49DE68AC1865A766008846C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49DE68AE1865A766008846C9 /* twcoursesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = twcoursesTests.m; sourceTree = "<group>"; };
 		49DE68B91865C015008846C9 /* sections_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = sections_Storyboard.storyboard; sourceTree = "<group>"; };
+		49FBBA8D187AD9F00083222A /* play_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play_button.png; path = ../../../Desktop/play_button.png; sourceTree = "<group>"; };
 		939B3ECC18705D440020C15C /* NSNumber+TWVideoLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+TWVideoLength.h"; path = "utils/NSNumber+TWVideoLength.h"; sourceTree = "<group>"; };
 		939B3ECD18705D440020C15C /* NSNumber+TWVideoLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+TWVideoLength.m"; path = "utils/NSNumber+TWVideoLength.m"; sourceTree = "<group>"; };
 		939B3ED5187060D60020C15C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		499464EF18671BEB003C22CB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				49FBBA8D187AD9F00083222A /* play_button.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				4966B8D31870AE10005B1804 /* chapters_Storyboard.storyboard in Resources */,
 				49628A5F18739E930017D12D /* chapter_Storyboard.storyboard in Resources */,
 				939B3ED11870608E0020C15C /* Localizable.strings in Resources */,
+				49FBBA8E187AD9F00083222A /* play_button.png in Resources */,
 				49DE689C1865A766008846C9 /* Images.xcassets in Resources */,
 				49DE68BA1865C015008846C9 /* sections_Storyboard.storyboard in Resources */,
 				49DE688E1865A766008846C9 /* InfoPlist.strings in Resources */,

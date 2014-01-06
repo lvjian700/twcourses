@@ -46,7 +46,7 @@
 }
 
 -(void) loadVideoImage {
-//    NSString *path = @"http://10.29.2.180/Roar.m4v";
+//    NSString *path = @"http://localhost/~twsupport/test.mp4";
     NSString *path = _chapter.videoPath;
     
     movieController = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL URLWithString:path]];
@@ -61,11 +61,23 @@
     NSError *error =[userInfo objectForKey: @"MPMoviePlayerThumbnailErrorKey"];
     if (error == nil) {
         _videoImageView.image = image;
+        [self addPlayButtonSubView];
     } else {
         DLog(@"--- fetching image fails.");
     }
 }
 
+-(void)addPlayButtonSubView
+{
+    CGRect backgroundRect = [_videoImageView bounds];
+    UIImage *playButton = [UIImage imageNamed:@"play_button.png"];
+    NSInteger leftPosition = backgroundRect.size.width/2 - playButton.size.width/2;
+    NSInteger rightPosition = backgroundRect.size.height/2 - playButton.size.height/2;
+    
+    UIImageView *playButtonImageView = [[UIImageView alloc] initWithFrame:CGRectMake(leftPosition, rightPosition, playButton.size.width, playButton.size.height)];
+    [playButtonImageView setImage:playButton];
+    [_videoImageView addSubview:playButtonImageView];
+}
 
 #pragma mark - Table view data source
 
