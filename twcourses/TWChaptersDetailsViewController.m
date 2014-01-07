@@ -9,6 +9,7 @@
 @implementation TWChaptersDetailsViewController
 {
     MPMoviePlayerController *movieController;
+    NSString *vedioPath;
 }
 
 - (id) initWithStyle:(UITableViewStyle) style {
@@ -46,10 +47,11 @@
 }
 
 -(void) loadVideoImage {
-//    NSString *path = @"http://localhost/~twsupport/test.mp4";
-    NSString *path = _chapter.videoPath;
+//    vedioPath = @"http://localhost/~twsupport/test.mp4";
+ vedioPath = _chapter.videoPath;
     
-    movieController = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL URLWithString:path]];
+    movieController = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL URLWithString:vedioPath]];
+    movieController.shouldAutoplay = NO;
     NSMutableArray * allThumbnails = [NSMutableArray  arrayWithObjects:[NSNumber numberWithDouble:5.0],nil];
     [movieController requestThumbnailImagesAtTimes:allThumbnails timeOption:MPMovieTimeOptionExact];
 }
@@ -60,11 +62,26 @@
     UIImage *image =[userInfo objectForKey: @"MPMoviePlayerThumbnailImageKey"];
     NSError *error =[userInfo objectForKey: @"MPMoviePlayerThumbnailErrorKey"];
     if (error == nil) {
+        [self bindSingleTap];
         [_videoImageView setImage:image];
         [_videoImageView addPlayButtonSubView];
     } else {
         DLog(@"--- fetching image fails.");
     }
+}
+
+-(void)bindSingleTap
+{
+    _videoImageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *singleTap =
+    [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(whenClickImage)];
+    [_videoImageView addGestureRecognizer:singleTap];
+}
+
+-(void)whenClickImage
+{
+    MPMoviePlayerViewController *moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL fileURLWithPath:vedioPath]];
+    [self presentMoviePlayerViewControllerAnimated:moviePlayer];
 }
 
 #pragma mark - Table view data source
