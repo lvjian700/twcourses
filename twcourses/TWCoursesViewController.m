@@ -86,26 +86,38 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    NSInteger result = [_courses_list count];
-    NSLog(@"courses number : %i" , result);
-    return result;
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        tableView.rowHeight = self.tableView.rowHeight;
+        return [self.searchResults count];
+    }
+    else
+    {
+        NSInteger result = [_courses_list count];
+        return result;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    TWCoursesCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    TWCourses *current_course = [_courses_list objectAtIndex:indexPath.row];
+    TWCoursesCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    TWCourses *current_course;
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        current_course = [_searchResults objectAtIndex:indexPath.row];
+    }
+    else
+    {
+        current_course = [_courses_list objectAtIndex:indexPath.row];
+    }
     
     NSString *imagePath = [NSString stringWithFormat:@"%@", current_course.coverImagePath];
-    DLog(@"-image path: %@", imagePath);
     NSURL *imageURL = [NSURL URLWithString: imagePath];
     [cell.course_image setImageWithURL: imageURL placeholderImage:nil];
     cell.course_name.text = current_course.name;
@@ -117,65 +129,55 @@
 
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	TWCourses *selected = [_courses_list objectAtIndex:indexPath.row];
+	TWCourses *selected;
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        selected = [self.searchResults objectAtIndex:indexPath.row];
+    }
+    else
+    {
+        selected = [_courses_list objectAtIndex:indexPath.row];
+    }
+
 	NSString *name = selected.name;
-	DLog(@"--selectedCourses: %@", name);
-	
 	[TWCourses findOneByName:name success:^(TWCourses *courses) {
 		_coursesDetailsViewController.courses = courses;
 		[self.navigationController pushViewController:_coursesDetailsViewController animated:YES];
 	}];
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+
+#pragma mark - Content Filtering
+
+- (void)updateFilteredContentForCourseName:(NSString *)courseName
 {
-    // Return NO if you do not want the specified item to be editable.
+    if ((courseName == nil) || [courseName length] == 0)
+    {
+        self.searchResults = [self.courses_list mutableCopy];
+    }
+    else
+    {
+        self.searchResults = [[NSMutableArray alloc] init];
+        for (TWCourses *course in self.courses_list)
+        {
+            NSUInteger searchOptions = NSCaseInsensitiveSearch;
+            NSRange courseNameRange = NSMakeRange(0, course.name.length);
+            NSRange foundRange = [course.name rangeOfString:courseName options:searchOptions range:courseNameRange];
+            if (foundRange.length > 0)
+            {
+                [self.searchResults addObject:course];
+            }
+        }
+    }
+}
+
+#pragma mark - UISearchDisplayController Delegate Methods
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self updateFilteredContentForCourseName:searchString];
     return YES;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
 
 @end

@@ -17,5 +17,6 @@
 }
 @property (strong, nonatomic) TWCourses *courses;
 @property (strong, nonatomic) NSArray *courses_list;
+@property (nonatomic, retain) NSMutableArray *searchResults;
 
 @end
