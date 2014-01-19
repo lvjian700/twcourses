@@ -51,7 +51,7 @@
 	self.navigationItem.title = _courses.name;
 	_overviewTextView.text = _courses.overview;
 	
-	NSString *imagePath = [NSString stringWithFormat:@"%@%@", TWCoursesRootPath, _courses.coverImagePath];
+	NSString *imagePath = [NSString stringWithFormat:@"%@", _courses.coverImagePath];
 	DLog(@"-image path: %@", imagePath);
 	NSURL *imageURL = [NSURL URLWithString: imagePath];
 	[_coverImageView setImageWithURL: imageURL

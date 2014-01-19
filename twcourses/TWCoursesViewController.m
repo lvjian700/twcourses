@@ -104,7 +104,7 @@
     TWCoursesCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     TWCourses *current_course = [_courses_list objectAtIndex:indexPath.row];
     
-    NSString *imagePath = [NSString stringWithFormat:@"%@%@", TWCoursesRootPath, current_course.coverImagePath];
+    NSString *imagePath = [NSString stringWithFormat:@"%@", current_course.coverImagePath];
     DLog(@"-image path: %@", imagePath);
     NSURL *imageURL = [NSURL URLWithString: imagePath];
     [cell.course_image setImageWithURL: imageURL placeholderImage:nil];
