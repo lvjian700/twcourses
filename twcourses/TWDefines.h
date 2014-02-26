@@ -18,6 +18,8 @@
 // Configration
 #define TWCoursesRootPath @"http://warlock-course.ap01.aws.af.cm/"
 #define TWCoursesAPIURL [NSURL URLWithString: @"http://warlock-course.ap01.aws.af.cm/api/"]
+//#define TWCoursesRootPath @"http://localhost:3000/"
+//#define TWCoursesAPIURL [NSURL URLWithString: @"http://localhost:3000/api/"]
 #define TWDateFormatTimeZone @"yyyy-MM-dd HH:mm:ss Z"
 
 

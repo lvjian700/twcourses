@@ -14,6 +14,6 @@
 
 @property (strong, nonatomic) TWChapter *chapter;
 @property (strong, nonatomic) IBOutlet UITableView *chapterDetailsTableView;
-@property (strong, nonatomic) IBOutlet TWVedioImageView *videoImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *videoImageView;
 
 @end

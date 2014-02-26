@@ -22,6 +22,7 @@
 
 - (void) viewWillAppear:(BOOL) animated
 {
+    DLog(@"refreshView in Chapters controller.");
     [self refreshView];
 }
 
@@ -47,8 +48,8 @@
 }
 
 -(void) loadVideoImage {
-//    vedioPath = @"http://localhost/~twsupport/test.mp4";
- vedioPath = _chapter.videoPath;
+    vedioPath = _chapter.videoPath;
+    DLog(@"fetch video image from path: %@", vedioPath);
     
     movieController = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL URLWithString:vedioPath]];
     movieController.shouldAutoplay = NO;
@@ -64,7 +65,7 @@
     if (error == nil) {
         [self bindSingleTap];
         [_videoImageView setImage:image];
-        [_videoImageView addPlayButtonSubView];
+        //[_videoImageView addPlayButtonSubView];
     } else {
         DLog(@"--- fetching image fails.");
     }
@@ -77,10 +78,16 @@
     [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(whenClickImage)];
     [_videoImageView addGestureRecognizer:singleTap];
 }
+- (IBAction)clickPlayButton:(id)sender {
+    [self whenClickImage];
+}
 
 -(void)whenClickImage
 {
-    MPMoviePlayerViewController *moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL fileURLWithPath:vedioPath]];
+    NSURL *url = [NSURL URLWithString:vedioPath];
+    DLog(@"play url: %@", url);
+    MPMoviePlayerViewController *moviePlayer = [[MPMoviePlayerViewController alloc]
+                                                initWithContentURL:url];
     [self presentMoviePlayerViewControllerAnimated:moviePlayer];
 }
 

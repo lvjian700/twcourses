@@ -12,6 +12,7 @@
 
 -(void)addPlayButtonSubView
 {
+    DLog(@"add play button to imageview");
     CGRect backgroundRect = [self bounds];
     UIImage *playButton = [UIImage imageNamed:@"play_button.png"];
     NSInteger leftPosition = backgroundRect.size.width/2 - playButton.size.width/2;
