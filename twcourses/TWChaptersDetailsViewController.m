@@ -65,7 +65,6 @@
     if (error == nil) {
         [self bindSingleTap];
         [_videoImageView setImage:image];
-        //[_videoImageView addPlayButtonSubView];
     } else {
         DLog(@"--- fetching image fails.");
     }
